@@ -10,5 +10,17 @@
                 </p>
             </li>
         {% endfor %}
+        {% else %}
+            <p>Sorry! No movies on this genre! Stay updated for movies on this genre!!</p>
     {% endif %}
+    
+    <button>
+        <a href="{% url 'movieBrowser:index' %}">Go back to home page of Movie Browser app!</a>
+    </button>
+    <hr>
+    <hr>
+    
+    <button>
+        <a href="{% url 'home' %}">Go back to app's main home page</a>
+    </button>
 {% endblock b %}

@@ -1,16 +1,25 @@
 {% extends "base.html" %}
 {% block b %}
     {% for m in movie %}
-        <p>{{ m.genre }}</p>
+        <p>Name: {{ m.name }}</p>
+        <p>Genre: {{ m.genre }}</p>
         <p>Release date: {{ m.releaseDate }}</p>
         <p>Metacritic score: {{ m.metacriticScore }}</p>
         <p>Reviews: {{ m.reviews }}</p>
+        <p>Watch trailer below: (may take some time to load)</p>
         {{ m.embedLink | safe}}
 
         <hr>
         <button>
-{#            <a href="{% url 'movieBrowser:genre_access' genre_id %}"></a>#}
+            <a href="{% url 'movieBrowser:genre_access' m.genre_id %}">Go back to genre selection</a>
         </button>
-
+        <button>
+            <a href="{% url 'movieBrowser:index' %}">Go back to home page of movie browser app</a>
+        </button>
+        <hr>
+        <hr>
+        <button>
+            <a href="{% url 'home' %}">Go to app's main home page!</a>
+        </button>
     {% endfor %}
 {% endblock b %}

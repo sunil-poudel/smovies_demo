@@ -8,12 +8,15 @@
 
         <h2>Genres</h2>
         <ol>
-            <li> <button> <a></a>Drama</button></li>
-            <li> <button> <a></a>Crime</button></li>
-            <li> <button> <a></a>Action</button></li>
-            <li> <button> <a></a>Sci-fi</button></li>
-            <li> <button> <a></a>Horror</button></li>
-            <li> <button> <a></a>Thriller</button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 1 %}">Drama</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 2 %}">Crime</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 3 %}">Action</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 4 %}">Sci-fi</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 5 %}">Horror</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 6 %}">Thriller</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 7 %}">Musical</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 8 %}">Biographical</a></button></li>
+            <li> <button> <a href="{% url 'movieBrowser:genre_access' 9 %}">Comedy</a></button></li>
         </ol>
     </div>
 {% endblock b %}

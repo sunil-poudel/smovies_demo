@@ -8,7 +8,6 @@ def index(request):
 
 def access_movies(request, movie_id):
     movie = MovieBrowse.objects.filter(pk=movie_id)
-    # movie  = MovieBrowse.objects.all()
     print(movie)
     context = {'movie': movie}
     return render(request, "movies_access.html", context)
