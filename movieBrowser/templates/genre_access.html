@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block b %}
+    {% if genre %}
+        <h1>Genre: {{ genre }}</h1>
+        {% for m in movie %}
+            <li>
+                <p>
+                    {{ m.name }}
+                    <button><a href="{% url 'movieBrowser:movie_access' m.id %}">Select movie</a></button>
+                </p>
+            </li>
+        {% endfor %}
+    {% endif %}
+{% endblock b %}

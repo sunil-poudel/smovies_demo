@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block b %}
+    {% for m in movie %}
+        <p>{{ m.genre }}</p>
+        <p>Release date: {{ m.releaseDate }}</p>
+        <p>Metacritic score: {{ m.metacriticScore }}</p>
+        <p>Reviews: {{ m.reviews }}</p>
+        {{ m.embedLink | safe}}
+
+        <hr>
+        <button>
+{#            <a href="{% url 'movieBrowser:genre_access' genre_id %}"></a>#}
+        </button>
+
+    {% endfor %}
+{% endblock b %}
